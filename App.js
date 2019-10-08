@@ -1,16 +1,17 @@
-import { TabNavigator } from 'react-navigation';
+import { createAppContainer } from 'react-navigation';
+import { createBottomTabNavigator } from 'react-navigation-tabs';
+
 
 // import screen tabs
 import profile from './screens/profile';
 import settings from './screens/settings';
 
 
-var myTabs = TabNavigator ({
-  Tab1: {profile: profile},
-  Tab2: {settings: settings}
-
+const tabNavigator = createBottomTabNavigator ({
+  profile: profile,
+  settings: settings
 });
 
-export default myTabs;
+export default createAppContainer(tabNavigator);
 
 
