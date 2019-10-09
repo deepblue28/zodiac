@@ -13,7 +13,7 @@ export default class settings extends Component {
       //view is parent Component, text is child
       //ImageBackground parent element
       <ImageBackground 
-       source={require('./assets/sunset.jpg')}
+       //source={require('./assets/sunset.jpg')}
         style={styles.container}> 
 
         <View style={styles.overlay}>
@@ -23,12 +23,8 @@ export default class settings extends Component {
            </View>
 
     //       <View style={styles.MenuContainer}>
-    //         <Menu ZodiacImage={require('./assets/aries.png')} /> 
-    //         <Menu ZodiacImage={require('./assets/taurus.png')} />
-    //         <Menu ZodiacImage={require('./assets/gemini.png')} />
-    //         <Menu ZodiacImage={require('./assets/cancer.png')} />
-    //         <Menu ZodiacImage={require('./assets/leo.png')} />
-    //         <Menu ZodiacImage={require('./assets/virgo.png')} />
+    //         
+    //         
     //       </View>
 
     //     </View> 

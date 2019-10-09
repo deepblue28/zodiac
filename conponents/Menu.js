@@ -1,8 +1,8 @@
-import React  from 'react';
+import React, { Component } from 'react';
 import { StyleSheet, View, Image} from 'react-native'; //imported from react native
  
 // export it as component to other pages
-export default class Menu extends React.Component {
+export default class Menu extends Component {
     
     render() {
         return (
