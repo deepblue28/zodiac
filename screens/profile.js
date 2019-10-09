@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, ImageBackground} from 'react-native'; //imported from react native
-//import Menu from './conponents/Menu'; // remember semi-colon
+
 
 
 
@@ -13,9 +13,7 @@ export default class profile extends Component {
     return (
       //view is parent Component, text is child
       //ImageBackground parent element
-      <ImageBackground 
-       //source={require('./assets/sunset.jpg')}
-        style={styles.container}> 
+      <ImageBackground style={styles.container}> 
 
         <View style={styles.overlay}>
 
@@ -23,14 +21,14 @@ export default class profile extends Component {
              <Text style={styles.sign}>profile</Text>
           </View>
 
-    //       <View style={styles.MenuContainer}>
-    //      
-    //        
-    //       </View>
+           <View style={styles.MenuContainer}>
+          
+           
+           </View>
 
-    //     </View> 
+         </View> 
  
-    //   </ImageBackground>
+     </ImageBackground>
 
         
        
