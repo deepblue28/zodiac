@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, ImageBackground} from 'react-native'; //imported from react native
+import { StyleSheet, Text, View, Image} from 'react-native'; //imported from react native
 
 
 
@@ -13,22 +13,39 @@ export default class profile extends Component {
     return (
       //view is parent Component, text is child
       //ImageBackground parent element
-      <ImageBackground style={styles.container}> 
-
-        <View style={styles.overlay}>
+      
+       <View styles={styles.container}>
+        
 
           <View style={styles.header}>
-             <Text style={styles.sign}>profile</Text>
+             <Text style={styles.sign}>What's your zodiac</Text>
           </View>
 
-           <View style={styles.MenuContainer}>
-          
-           
-           </View>
+          <View style={styles.MenuContainer}>
+        
+        <Image style={{width: 60, height: 60}}
+          source={{uri: 'http://www.clker.com/cliparts/b/7/b/2/1222277214403740641Aquarius.svg.med.png'}}
+        /> 
 
-         </View> 
+        <Image style={{width: 60, height: 60}}
+          source={{uri: 'http://www.clker.com/cliparts/b/4/2/5/1222277224836626404Aries.svg.med.png'}}
+        /> 
+
+
+        <Image style={{width: 60, height: 60}}
+          source={{uri: 'http://www.clker.com/cliparts/1/f/c/f/12222772391191676953Gemini.svg.med.png'}}
+        /> 
+
+        <Image style={{width: 60, height: 60}}
+          source={{uri: 'http://www.clker.com/cliparts/6/a/e/e/1222277271120416501Taurus.svg.med.png'}}
+        /> 
+
+
+          </View>
+
+         </View>
  
-     </ImageBackground>
+     
 
         
        
@@ -47,18 +64,18 @@ const styles = StyleSheet.create({
     height: '100%',
     width: '100%'
   },
-// apply css variable to any child or parent component
+
   title: {
-    color: 'black',
+    color: '#0E0E0E',
     fontSize: 23,
   },
 
-  overlay: {
+  /*overlay: {
     flex: 1,
     height: '100%',
     width: '100%',
     backgroundColor: 'rgba(165, 180, 199, .2)'
-  },
+  },*/
 
   header: {
     height: '27%',
@@ -80,14 +97,13 @@ sign: {
 
 MenuContainer: {
   height: '32%',
+  width: '100%',
   flexDirection: 'row',
   flexWrap: 'wrap',
   justifyContent: 'center',
-  marginTop: 30,
+  marginTop: 40,
   
-
-
-
+  
 }
 
 

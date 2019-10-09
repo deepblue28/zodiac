@@ -3,18 +3,19 @@ import { createBottomTabNavigator } from 'react-navigation-tabs';
 
 
 // import screen tabs
-import profile from './screens/profile';
-import settings from './screens/settings';
-import home from './screens/home';
+import Profile from './screens/profile';
+import Settings from './screens/settings';
+import Home from './screens/home';
 
-
+// tab settings
 const tabNavigator = createBottomTabNavigator ({
-  home: home,
-  profile: profile,
-  settings: settings
+  Home: Home,
+  Signs: Profile,
+  Settings: Settings
 
 });
 
+// export to other pages
 export default createAppContainer(tabNavigator);
 
 
