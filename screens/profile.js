@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Image} from 'react-native'; //imported from react native
-
+import { StyleSheet, Text, View, Image, Animated} from 'react-native'; //imported from react native
 
 
 
@@ -9,7 +8,28 @@ import { StyleSheet, Text, View, Image} from 'react-native'; //imported from rea
 
 
 export default class profile extends Component {
-  render() {
+
+  animation = new Animated.Value(0);
+  animationSpring = new Animated.Value(0);
+
+
+  componentDidMount() { 
+    Animated.timing(this.animation, {
+      duration: 2000,
+      toValue: 1
+    }).start()
+
+
+    Animated.spring(this.animationSpring, {
+        toValue: 100,
+        speed: 0,
+        bounciness: 10
+    }).start()
+
+  }
+
+
+render() {
     return (
       //view is parent Component, text is child
       //ImageBackground parent element
@@ -17,9 +37,9 @@ export default class profile extends Component {
        <View styles={styles.container}>
         
 
-          <View style={styles.header}>
-             <Text style={styles.sign}>What's your zodiac</Text>
-          </View>
+        <View style={styles.header}>
+            <Animated.Text style={{...styles.Text, fontSize: 30, fontWeight: 500, opacity: this.animation}}>What's your sign</Animated.Text>
+        </View>
 
           <View style={styles.MenuContainer}>
         
@@ -38,6 +58,10 @@ export default class profile extends Component {
 
         <Image style={{width: 60, height: 60}}
           source={{uri: 'http://www.clker.com/cliparts/6/a/e/e/1222277271120416501Taurus.svg.med.png'}}
+        /> 
+
+        <Image style={{width: 60, height: 60}}
+          source={{uri: 'http://www.clker.com/cliparts/f/c/2/8/12222772761413931807Virgo.svg.med.png'}}
         /> 
 
 
@@ -65,10 +89,7 @@ const styles = StyleSheet.create({
     width: '100%'
   },
 
-  title: {
-    color: '#0E0E0E',
-    fontSize: 23,
-  },
+
 
   /*overlay: {
     flex: 1,
@@ -81,22 +102,13 @@ const styles = StyleSheet.create({
     height: '27%',
     alignItems: 'center',
     justifyContent: 'center',
-    color: '#fff', // add coma for each 
+    color: '#fff', 
 },
 
-sign: {
-  fontSize: 28,
-  fontWeight: '500',
-  fontFamily: 'Roboto',
-  color: 'rgba(51, 51, 49, 1.0)',
-  padding: 20,
-  paddingLeft: 40,
-  paddingRight: 40
 
-},
 
 MenuContainer: {
-  height: '32%',
+  height: '33%',
   width: '100%',
   flexDirection: 'row',
   flexWrap: 'wrap',
@@ -104,7 +116,9 @@ MenuContainer: {
   marginTop: 40,
   
   
-}
+},
+
+
 
 
 });
