@@ -9,24 +9,24 @@ import { StyleSheet, Text, View, Image, Animated} from 'react-native'; //importe
 
 export default class profile extends Component {
 
-  animation = new Animated.Value(0);
-  animationSpring = new Animated.Value(0);
+  // animation = new Animated.Value(0);
+  // animationSpring = new Animated.Value(0);
 
 
-  componentDidMount() { 
-    Animated.timing(this.animation, {
-      duration: 2000,
-      toValue: 1
-    }).start()
+  // componentDidMount() { 
+  //   Animated.timing(this.animation, {
+  //     duration: 2000,
+  //     toValue: 1
+  //   }).start()
 
 
-    Animated.spring(this.animationSpring, {
-        toValue: 100,
-        speed: 0,
-        bounciness: 10
-    }).start()
+  //   Animated.spring(this.animationSpring, {
+  //       toValue: 100,
+  //       speed: 0,
+  //       bounciness: 10
+  //   }).start()
 
-  }
+  // }
 
 
 render() {
@@ -34,14 +34,14 @@ render() {
       //view is parent Component, text is child
       //ImageBackground parent element
       
-       <View styles={styles.container}>
+<View styles={styles.container}>
         
 
-        <View style={styles.header}>
-            <Animated.Text style={{...styles.Text, fontSize: 30, fontWeight: 500, opacity: this.animation}}>What's your sign</Animated.Text>
-        </View>
+    <View style={styles.header}>
+        <Animated.Text style={{...styles.Text, fontSize: 30, fontWeight: 500, opacity: this.animation}}>What's your sign</Animated.Text>
+    </View>
 
-          <View style={styles.MenuContainer}>
+      <View style={styles.MenuContainer}>
         
         <Image style={{width: 60, height: 60}}
           source={{uri: 'http://www.clker.com/cliparts/b/7/b/2/1222277214403740641Aquarius.svg.med.png'}}
@@ -65,9 +65,9 @@ render() {
         /> 
 
 
-          </View>
+      </View>
 
-         </View>
+</View>
  
      
 
@@ -86,17 +86,19 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     height: '100%',
-    width: '100%'
+    width: '100%',
   },
 
+View: {
+ backgroundColor: 'rgba(17, 124, 232, .3)',
+},
 
-
-  /*overlay: {
+  overlay: {
     flex: 1,
     height: '100%',
     width: '100%',
-    backgroundColor: 'rgba(165, 180, 199, .2)'
-  },*/
+    backgroundColor: 'rgba(17, 124, 232, .3)'
+  },
 
   header: {
     height: '27%',

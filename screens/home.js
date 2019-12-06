@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, ImageBackground, Animated} from 'react-native'; //imported from react native
+import { Assets } from 'react-navigation-stack';
+import { Asset } from 'expo-asset';
 //import { TextInput } from 'react-native-gesture-handler';
 
 
@@ -10,24 +12,24 @@ import { StyleSheet, Text, View, ImageBackground, Animated} from 'react-native';
 
 export default class home extends Component {
 
-  animation = new Animated.Value(0);
-  animationSpring = new Animated.Value(0);
+  // animation = new Animated.Value(0);
+  // animationSpring = new Animated.Value(0);
 
 
-  componentDidMount() { 
-    Animated.timing(this.animation, {
-      duration: 1000,
-      toValue: 1
-    }).start()
+  // componentDidMount() { 
+  //   Animated.timing(this.animation, {
+  //     duration: 1000,
+  //     toValue: 1
+  //   }).start()
 
 
-    Animated.spring(this.animationSpring, {
-        toValue: 100,
-        speed: 0,
-        bounciness: 10
-    }).start()
+  //   Animated.spring(this.animationSpring, {
+  //       toValue: 100,
+  //       speed: 0,
+  //       bounciness: 10
+  //   }).start()
 
-  }
+  // }
     
 
 
@@ -40,6 +42,12 @@ export default class home extends Component {
 
           <View style={styles.header}>
             {/* <Animated.Text style={{...styles.text, opacity: this.animation}}>What's your sign</Animated.Text> */}
+            <Text style={{fontSize: 50}}>WELCOME!</Text>
+            <Text style={{fontSize: 20, marginTop: 20}}>Get info and insight into your zodiac sign and maybe see you're 
+            compatiable with.</Text>
+
+                  
+            
           </View>
           
            
@@ -75,7 +83,8 @@ const styles = StyleSheet.create({
     flex: 1,
     height: '100%',
     width: '100%',
-    backgroundColor: 'rgba(165, 180, 199, .2)'
+    backgroundColor: 'rgba(17, 124, 232, .3)',
+    
   },
 
   header: {
@@ -96,9 +105,10 @@ MenuContainer: {
   
 },
 
-text: {
+Text: {
 color: 'green',
 fontWeight: 600,
+
 
 },
 
